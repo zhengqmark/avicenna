@@ -17,24 +17,11 @@
                 <span class="text-muted publication-date">
                     {{substr ($page.Params.date.Format "2006-01-02") 0 4}},
                 </span>
-                {{ $awards := $page.Params.awards }}
-                {{ if $awards }}
-                <span class="text-muted publication-name">
-                    {{$page.Params.publication}},
-                </span>
-                {{range $i, $award := $awards}}
-                <i>{{$award}}</i>
-                {{ if lt $i (sub (len $awards) 1)}}
-                <span class="separator">
-                    ,
-                </span>
-                {{end}}
-                {{end}}
-                {{else}}
+
                 <span class="text-muted publication-name">
                     {{$page.Params.publication}}
                 </span>
-                {{end}}
+
             </div>
 
             <div class="section-2 text-muted w-100">
@@ -78,8 +65,6 @@
                 {{end}}
             </div>
             {{end}}
-
-
 
         </div>
 

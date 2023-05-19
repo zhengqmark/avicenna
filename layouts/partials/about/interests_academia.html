@@ -27,12 +27,16 @@
                     {{$academia.course.institution}}
                 </div>
                 <div class="main_color dates col-md-auto  justify-content-end">
-                    {{$academia.course.start_date}}
-                    {{ if $academia.course.end_date }}
-                    - {{$academia.course.end_date}}
-                    {{else}}
-                    - present
-                    {{end}}
+					{{if $academia.course.start_date}}
+                      {{$academia.course.start_date}}
+                      {{ if $academia.course.end_date }}
+                      - {{$academia.course.end_date}}
+                      {{else}}
+                      - present
+                      {{end}}
+					{{else}}
+					  {{$academia.course.end_date}}
+					{{end}}
                 </div>
             </div>
             <div class="degree_major row">
