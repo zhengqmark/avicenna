@@ -17,19 +17,12 @@
 <div class="affiliations row w-100 justify-content-center">
     <div class="row w-100 justify-content-center">
         {{ range $key, $value := $aboutPage.Params.affiliations }}
-        <div class="row w-100 justify-content-center" id="title-name">
-            <span class="main_color" id="title">
-                {{$value.affiliation.title}},
-            </span>
-            <span id="name" class="text-muted">
-                {{$value.affiliation.name}}
-            </span>
+        <div class="row w-100 justify-content-center text-muted" id="title-name">
+			{{$value.affiliation.title}}, {{$value.affiliation.name}}
         </div>
         <div class="row w-100 justify-content-center text-muted" id="email">
             {{$value.affiliation.email}}
         </div>
-
-
         {{ end }}
     </div>
 </div>
